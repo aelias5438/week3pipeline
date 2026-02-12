@@ -1,9 +1,9 @@
 # College Completion Dataset
 
-# 1. Can we predict whether a college is an HBCU based on its demographics, funding amounts, and academic outcomes?
-# This interesting because we could see whether HBCU's are ultimately achieving what they set out to do, which is provide a college opportunity for Black Americans.
-# 2. A key business metric here could be testing institutional classification accuracy.
-# 3. My instincts tell me that there are a large number of features that we can use to predict, there is a good mix of categorical and numerical data that cn help diversify modeling approaches.I'm worried about the missing data in several columns.
+# 1. Can we predict the graduation in 100% of time rate based on state, awards compared to national average, and percentage of full-time students
+# This is interesting as predicting what leads to high graduation rates is key in discovering where to target future funding for this purpose.
+# 2. A key business metric here is delta in graduation rates after funding is allocated based on predictions from the model.
+# 3. My instincts tell me that prediction will be possible due to the large number of features with large perceived individual impacts on an individual's success. I’m partially worried about missing data, but it doesn’t seem to be too big of an issue
 
 import pandas as pd
 df =  pd.read_csv("Data/cc_institution_details.csv")
@@ -11,19 +11,18 @@ df.head()
 df.info()
 df.shape
 
-# I see that there is a ton of non-null and strings that need to be corrected. I'll attempt to solve the problem in q4
-
+# The data isn't ready for prediction as strings and other incorrectly formatted data are present in numeric columns.
 
 
 # Job Placement Dataset
 
-# 1. Can we predict a student's expected salary based on how they perform academically, and their work experience
-# 2. A good IBM would be the accuracy of the salary prediction.
-# 3. My insticts tell me that there is a smaller sample size which could hurt us. Also the salary only exists for students that were places which could be a form of selection bias.
+# 1. How is status influenced by academic and demographic factors.
+# 2. A good metric would be the actual placement rate.
+# 3. Since we have less features here, my instincts tell me to worry a bit as we don’t have many features to test for predictive ability.
 
 import pandas as pd
 pd.set_option("display.max_rows", None)
 df2 = pd.read_csv("Data/job_placement.csv")
 df2.head()
 df2.info()
-# I notice that alnmost half of them are strings. This could hurt us later on potentially.
+# A lot of the data is strings, definitely needs cleaning before prediction.

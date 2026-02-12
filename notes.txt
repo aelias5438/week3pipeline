@@ -1,0 +1,19 @@
+Step 1 — Data prep (college dataset): load → clean exactly like your prior lab pipeline (types, drops, one-hot, scaling) and fix the split so it’s stratified on the binary target (this is the “3 points off” feedback you got). 
+
+q4
+
+Step 2 — Baseline kNN (k=3): fit kNN on train, predict probabilities on test.
+
+Step 3 — Results dataframe: build a dataframe with actual, predicted, probability.
+
+Step 4 — Concept question (no code): explain how changing k affects the “threshold function” and confusion matrix behavior.
+
+Step 5 — Confusion matrix + interpretation: evaluate and discuss whether the model answers your question well.
+
+Step 6 — Two functions:
+
+Function A: clean + split (stratified)
+
+Function B: train/test with adjustable k and threshold
+
+Step 7 — Optimization: loop over k + thresholds, compare performance.
